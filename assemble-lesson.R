@@ -20,11 +20,11 @@ targetSubject<-"" #options= "math","ela","science","social studies"
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # STEP 1: Run all subsidiary lesson scripts ---------------------------------------
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-# All scripts for making graphs and other visuals for the lesson should be in 
+# *All scripts for making graphs and other visuals for the lesson should be in 
 # "scripts/"
 
 
-# Add a comment explaining what each script does and source it
+# **Add a comment explaining what each script does and source it
 # source("scripts/lessonAssetModule.R")
 
 
@@ -33,7 +33,7 @@ targetSubject<-"" #options= "math","ela","science","social studies"
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # STEP 2: Compile alignment data --------------------------------------------------
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-# compile the alignment matrix into a tidy tibble & output a JSON for Strapi
+# Compile the alignment matrix into a tidy tibble & output a JSON for Strapi
 
 ## Import the completed lesson alignment matrix from the meta subfolder
 # Suggestion for the file to import
