@@ -11,7 +11,7 @@ library(galacticPubs)
 # The lesson shortTitle, which will be added as a prefix to some file names
 shortTitle<-"enterLessonShortTitle"
 fullTitle <- "enterFullLessonTitle"
-targetSubject<-"" #options= "math","ela","science","social studies"
+targetSubject<-c("ela","math","science","social studies") #options= "math","ela","science","social studies"
 
 
 
@@ -42,7 +42,7 @@ f<-likelyFilename #use the suggested file, type in the path, or use f<-file.choo
 
 # Aggregate alignment matrix notes and codes; merge with the alignments master
 # document from our standardX package
-alignment<-compileAlignment(f)
+alignment<-compileAlignment()
 
 
 
@@ -80,6 +80,13 @@ learningChart(alignment,
 
 
 
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# STEP 3: Compile Procedure -------------------------------------------------------
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# Compile Procedure from XLSX spreadsheet
+
+compileProcedure()
+
 
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -101,13 +108,16 @@ compileAcknowledgments(fileName=paste0(shortTitle,"_acknowledgements.json"))
 compileVersions(fileName=paste0(shortTitle,"_version_info.json"))
 
 
-
-
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# STEP 8: Add Google Drive Share Links for Lesson Artifacts------------------------
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+googledrive::drive_auth() #need to authorize your account first time you use this
+updateTeachingMatLinks(shortTitle)#c("quickPrep_feedback","remote","classroom")
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-# STEP 8: Any additional actions --------------------------------------------------
+# STEP 9: Any additional actions --------------------------------------------------
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+compileTeachingMat()
 
 
 
