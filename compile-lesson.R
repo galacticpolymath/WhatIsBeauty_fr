@@ -1,10 +1,11 @@
 # Script for assembling a Galactic Polymath interdisciplinary lesson plan
-# ver 0.2.0
+# ver 0.2.1
 
 require(remotes)
 install_github("galacticpolymath/galacticPubs")
-library(galacticPubs)
-googledrive::drive_auth() #need to authorize your account first time you use this
+install_github("galacticpolymath/galacticEdTools")
+library(galacticPubs);library(galacticEdTools)
+#googledrive::drive_auth() #If you need to authorize your account first time you use this
 
 # Run this script to assemble the assets (e.g. graphs used for presentations, 
 # videos, etc.) and data structures (JSON files) for publishing the lesson.
@@ -74,8 +75,8 @@ learningChart(alignment,
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # STEP 5: Add/Update Google Drive Share Links for Lesson Artifacts-----------------
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-## PURPOSE: Fill in/add for the first time share and download links to the teaching-
-##          materials Excel spreadsheet
+## PURPOSE: Fill in or add for the first time share and download links to the 
+##          teaching-materials.xlsx Excel spreadsheet
 ##
 ## DEPENDENT FILES: meta/teaching-materials.xlsx
 
@@ -108,17 +109,12 @@ compileProcedure()
 compileTeachingMat()
 
 
-
-
-
-
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # STEP 8: Compile Acknowledgements JSON -------------------------------------------
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 # Takes acknowledgment entries from "meta/acknowledgments.xlsx" & turns them into a
 # structured JSON for Strapi
 compileAcknowledgments()
-
 
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -145,7 +141,7 @@ compileJSON()
 
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-# STEP 11: Any additional actions --------------------------------------------------
+# STEP 11: Any additional actions -------------------------------------------------
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
