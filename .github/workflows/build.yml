@@ -1,0 +1,24 @@
+name: Copy published files
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # windows-latest | macos-latest
+    name: Test changed-files
+    steps:
+      - name: Copy
+        uses: andstor/copycat-action@v3
+        with:
+          personal_token: ${{ secrets.ACTION_HERO }}
+          src_path: published/.
+          dst_path: /lessons/${{ github.event.repository.name }}/.
+          clean: true
+          src_branch: main
+          dst_branch: main
+          dst_owner: galacticpolymath
+          dst_repo_name: gp-catalog
+          commit_message: Automated publishing commit
