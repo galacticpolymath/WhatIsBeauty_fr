@@ -1,0 +1,6 @@
+assets/supporting_media/
+- Folder for files you want to publish with the lesson.
+- You can include links to these files in your markdown text:
+- e.g. embed an image with ![alt text](filename.png)
+
+*Common example would be including the screenshot of the paper for the scientific background section.
