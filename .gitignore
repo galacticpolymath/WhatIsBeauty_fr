@@ -8,8 +8,11 @@ NewGPLesson.Rproj
 /assets/**
 /assembled-lesson-materials/**
 #excludes subfolders from ignore rules
-!/assets/**/ 
+!/assets/**/
 !/assets/**/.gitkeep
 !/assets/**/help.txt
 !/assembled-lesson-materials/**/
 !assembled-lesson-materials/**/.gitkeep
+WhatIsBeauty (Step2) Lesson Sketch.gdoc
+WhatIsBeauty (Step4) Project Roadmap.gdoc
+WhatIsBeauty_Roadmap.docx
