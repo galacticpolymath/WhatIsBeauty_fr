@@ -1,5 +1,5 @@
 require(pacman)
-p_load(dplyr,ggplot2,readr,utils,skimr,galacticEdTools)
+p_load(dplyr,galacticPubs,readr,utils,skimr,galacticEdTools)
 
 NA_outliers <- function(df, QUANTILE_RANGE,id=NA,ignore) {
   # df should be a dataframe or matrix; QUANTILE_RANGE should be in the form c(.01,.99);
@@ -103,14 +103,48 @@ kiru2<-NA_outliers(kiru)$newdata
 kiru2$HeightTest<-ifelse(kiru2$WaistToKnee+kiru2$LegLength<kiru2$TotalHeight,"PASS","FAIL")
 
 #Something real funky with these TotalHeight values
-kiru3<-kiru2 %>% filter(HeightTest=="PASS")
+kiru3<-kiru2 %>% filter(HeightTest=="PASS") %>% as_tibble()
 skim(kiru3) #This looks much better!
 
-kiru_prop<-tibble(row=1:nrow(kiru3),`Arm Length / Height`=kiru3$ArmLength/kiru3$TotalHeight)
+kiru4<-kiru3 %>% mutate(ArmLength_over_Height=ArmLength/TotalHeight,LegLength_over_Height=LegLength/TotalHeight)
 
-kiru_prop %>% ggplot() +
-  geom_histogram(aes(x=`Arm Length / Height`),fill="gray50",col=gpColors("gal"),bins=15)+
-  theme_galactic()
+# "Reachiness"
+mean_Reachiness<-mean(kiru4$ArmLength_over_Height,na.rm=T)
+Col1<-gpColors("burst")
+Col2<-gpColors("burst")
+kiru4 %>% ggplot() +
+  geom_histogram(aes(x=ArmLength_over_Height),fill=Col1,col=gpColors("gal"),binwidth=0.1)+
+  scale_x_continuous(breaks=seq(0,2,0.25),labels=sapply(seq(0,2,0.25),function(x) ifelse(x%%1==0|x%%1==0.5,x,"")),
+                     expand=expansion(0))+
+  theme_galactic(bg.col = "gray98",grid.col = "gray70",pad.xlab=30,pad.outer=rep(10,4),font.face = 2,text.cex = c(0,1.2,1.7,1))+
+  theme(axis.line = element_line(size=1.1,colour="gray60"))+
+  geom_label(x=0.49,y=100,fontface=2,family="Montserrat",label="Range of \nHuman Variation",hjust=0,vjust=1.1,col="white",fill=Col1,size=8,label.padding = unit(10,"pt"),lineheight=0.25)+
+  xlab('"Reachiness" (Arm Length / Height)')+
+  ylab("Count")+
+  coord_cartesian(clip="off",xlim = c(0,2),expand=F,ylim=c(0,100))+
+  #add arrow pointing at mean
+  geom_segment(x=mean_Reachiness,xend=mean_Reachiness,y=-17,yend=-3,arrow=arrow(length=unit(10,"pt")),col=Col2)+
+  annotate("text",x=mean_Reachiness,y=-20,col=Col2,label=paste0("Human Average\n(",round(mean_Reachiness,2),")"),size=8,vjust=1,lineheight=0.25)
+gpsave("reachiness figure.png",height=2.5,width=7)
+
+# "Legginess" graph
+mean_Legginess<-mean(kiru4$LegLength_over_Height,na.rm=T)
+Col1<-gpColors("hydrogen blue")
+Col2<-gpColors("hydrogen blue")
+kiru4 %>% ggplot() +
+  geom_histogram(aes(x=LegLength_over_Height),fill=Col1,col=gpColors("gal"),binwidth=0.1)+
+  scale_x_continuous(breaks=seq(0,2,0.25),labels=sapply(seq(0,2,0.25),function(x) ifelse(x%%1==0|x%%1==0.5,x,"")),
+                     expand=expansion(0))+
+  theme_galactic(bg.col = "gray98",grid.col = "gray70",pad.xlab=30,pad.outer=rep(10,4),font.face = 2,text.cex = c(0,1.2,1.7,1))+
+  theme(axis.line = element_line(size=1.1,colour="gray60"))+
+  geom_label(x=0.7,y=100,fontface=2,family="Montserrat",label="Range of \nHuman Variation",hjust=0,vjust=1.1,col="white",fill=Col1,size=8,label.padding = unit(10,"pt"),lineheight=0.25)+
+  xlab('"Leginess" (Leg Length / Height)')+
+  ylab("Count")+
+  coord_cartesian(clip="off",xlim = c(0,2),expand=F,ylim=c(0,100))+
+  #add arrow pointing at mean
+  geom_segment(x=0.4,xend=mean_Legginess,y=-17,yend=-3,arrow=arrow(length=unit(10,"pt")),col=Col2)+
+  annotate("text",x=0.4,y=-20,col=Col2,label=paste0("Human Average\n(",round(mean_Legginess,2),")"),size=8,vjust=1,lineheight=0.25)
+gpsave("legginess figure.png",height=2.5,width=7)
 
 
-write_csv(kiru_prop,"data/human_proportion_distributions.csv")
+write_csv(kiru4,"data/human_proportion_distributions.csv")
