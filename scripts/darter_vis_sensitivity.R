@@ -1,5 +1,5 @@
 require(pacman)
-p_load(galacticPubs,galacticEdTools,dplyr,readr,readxl)
+p_load(galacticPubs,galacticEdTools,dplyr,readr,readxl,ggplot2)
 
 # Define function to convert wavelength to RGB color
 # From https://gist.github.com/friendly/67a7df339aa999e2bcfcfec88311abfc
@@ -59,22 +59,26 @@ wavelength_to_rgb <- function(wavelength, gamma=0.8){
 }
 
 spec_data <- read_excel("data/barrenense_MSP_forNatalie.xlsx",sheet="Graph")
+
+# Darter sensitivity curve
 names(spec_data)[1]<-"wavelength"
 manual_colors<-sapply(spec_data$wavelength,function(x) wavelength_to_rgb(x))
 names(manual_colors)<-as.character(spec_data$wavelength)
+#Make negative numbers 0
+spec_data$LWS<-ifelse(spec_data$LWS<0,0,spec_data$LWS)
 
-# Darter sensitivity curve
-ggplot(spec_data) + geom_smooth(formula="y~x",aes(x = wavelength, y = LWS), method="loess",se = FALSE,color=gpPal[[1]]$hex[1],size=2) +
-  theme_galactic(text.cex = 1.5,pad.outer = rep(10,4),pad.xlab=30) +
-  ylab("Darter Visual Sensitivity") + xlab("Wavelength of Light (nm)")+
-  #ggplot2::geom_vline(xintercept=570,linetype="dashed",color="orange")+
-  #ggplot2::geom_vline(xintercept=584,color="red")+
-  coord_cartesian(ylim=c(0,1.1),clip="off",expand=F)+
+ggplot(spec_data) + geom_smooth(formula="y~x",aes(x = wavelength, y = LWS), method="loess",se = FALSE,size=2,colour=gpColors("galactic black"),span=0.1) +
+  geom_smooth(formula="y~x",aes(x = wavelength, y = MWS), method="loess",se = FALSE,size=2,linetype="dashed",colour=gpColors("galactic black"),span=0.1) +
+  theme_galactic(text.cex = 1.5,pad.outer = rep(10,4)) +
+  ylab("Darter Visual Stimulation") + xlab("Wavelength of Light (nm)")+
+  # ggplot2::geom_vline(xintercept=570,linetype="dashed",color="orange")+
+  # ggplot2::geom_vline(xintercept=584,color="red")+
+  coord_cartesian(ylim=c(0,1.1),clip="off",expand=F)
   #Add spectrum below graph
-  geom_segment(aes(x=wavelength,xend=wavelength,y=-0.25,yend=-0.15,col=as.character(wavelength)),show.legend = F)+
-  scale_color_manual(values=manual_colors)+
-  geom_rect(xmin=300,xmax=380,ymin=-0.25,ymax=-0.15,fill="gray35")+
-  annotate("text",x=340,y=-0.2,label="UV",vjust=0.5,size=10,col="gray80")
+  #geom_segment(aes(x=wavelength,xend=wavelength,y=-0.25,yend=-0.15,col=as.character(wavelength)),show.legend = F)+
+  #scale_color_manual(values=manual_colors)+
+  #geom_rect(xmin=300,xmax=380,ymin=-0.25,ymax=-0.15,fill="gray35")+
+  #annotate("text",x=340,y=-0.2,label="UV",vjust=0.5,size=10,col="gray80")
 gpsave("darter_vis_sensitivity_curve.png")
 #This peak doesn't match expectations (the preferred orange model is at 570 :shrug:)
 #

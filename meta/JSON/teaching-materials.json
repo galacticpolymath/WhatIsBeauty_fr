@@ -1,0 +1,103 @@
+{
+  "__component": "teaching-resources.teaching-resources",
+  "SectionTitle": "Teaching Materials",
+  "Data": {
+    "classroom": {
+      "resourceSummary": [
+        {
+          "nItems": null,
+          "itemCat": "Digital Items",
+          "itemsGroup": [
+            {
+              "item": "Presentation",
+              "itemExplanation": "x N Parts"
+            }
+          ]
+        },
+        {
+          "nItems": 1,
+          "itemCat": "Printed Items",
+          "itemsGroup": [
+            {
+              "item": "Teacher Worksheet",
+              "itemExplanation": null
+            }
+          ]
+        },
+        {
+          "nItems": 4,
+          "itemCat": "Other Requirements",
+          "itemsGroup": [
+            {
+              "item": "Teacher's computer",
+              "itemExplanation": null
+            },
+            {
+              "item": "Internet Connection",
+              "itemExplanation": null
+            },
+            {
+              "item": "Projector",
+              "itemExplanation": null
+            },
+            {
+              "item": "Speakers",
+              "itemExplanation": null
+            }
+          ]
+        }
+      ],
+      "gradeVariantNotes": {
+        "part": null,
+        "partGradeVarNotes": "Overall notes on content adaptions across different grade levels"
+      },
+      "resources": [
+        {
+          "grades": "Grades 5-8",
+          "gradePrefix": "G5-8",
+          "links": {
+            "linkText": "Download G5-8 Materials for All Parts",
+            "url": "https://drive.google.com/drive/folders/18ciTw0tFAMly7AaoWS12Iicm6mb4Wx8o"
+          },
+          "parts": [
+            {
+              "part": 1,
+              "title": "Part Title. Leave Cols A:D blank if there's just 1 part.",
+              "preface": "Blurb of what this lesson teaches to go before Step 1.",
+              "itemList": [
+                {
+                  "itemTitle": "Presentation",
+                  "itemCat": "presentation",
+                  "links": [
+                    {
+                      "linkText": "Present Now",
+                      "url": "https://docs.google.com/presentation/d/19uK-BGaMWPolWCmUh5pgm1xWrtL5qTrVOW6HIYNn28Y/present"
+                    },
+                    {
+                      "linkText": "Copy to My Google Drive",
+                      "url": "https://docs.google.com/presentation/d/19uK-BGaMWPolWCmUh5pgm1xWrtL5qTrVOW6HIYNn28Y/template/preview"
+                    }
+                  ]
+                },
+                {
+                  "itemTitle": null,
+                  "itemCat": null,
+                  "links": [
+                    {
+                      "linkText": "PDF",
+                      "url": "https://docs.google.com/document/d/1NjSu7JWadkbN8qN5i5XnEwqrB8y7lmI1Kc3MvkLckwg/export?format=pdf"
+                    },
+                    {
+                      "linkText": "Copy to My Google Drive",
+                      "url": "https://docs.google.com/document/d/1NjSu7JWadkbN8qN5i5XnEwqrB8y7lmI1Kc3MvkLckwg/"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

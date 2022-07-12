@@ -1,0 +1,66 @@
+id: 5
+ShortTitle: WhatIsBeauty
+Language: English
+Country: United States
+lang: en
+lng: eng
+locale: en-US
+TemplateVer: 0.3.3
+galacticPubsVer: 0.8.2
+FirstPublicationDate: 2022-07-11 21:10:05
+LastUpdated: 2022-07-11 21:10:05
+URL: https://galacticpolymath.com/lessons/5
+GPCatalogPath: https://catalog.galacticpolymath.com/lessons/WhatIsBeauty/LESSON.json
+GitHubPath: git@github.com:galacticpolymath/WhatIsBeauty.git
+PublicationStatus: Draft
+RebuildAllMaterials: no
+ReleaseDate: ''
+Title: What Is Beauty
+Subtitle: ''
+SponsorName: ''
+SponsoredBy: ''
+SponsorLogo: ''
+LessonBanner: ''
+TargetSubject: Science
+LessonEnvir: Classroom
+ForGrades: 5-9
+GradesOrYears: Grades
+EstLessonTime: ''
+LearningEpaulette: ''
+LearningEpaulette_vert: ''
+LearningEpaulette_params_heightScalar: 1.0
+LearningEpaulette_params_randomSeed: 101.0
+LearningChart: ''
+LearningChart_params_centralText: ''
+LearningChart_params_caption: ''
+LearningChart_params_captionN: yes
+SupportingMedia: ''
+DrivingQ: |
+  1. What makes humans and other animals perceive something as beautiful?
+  2. How can we mathematically measure objects or images in ways that capture what a viewer would describe as “beautiful”?
+EssentialQ: How can science help deepen our understanding of the Arts, Humanities,
+  and ourselves?
+Hooks: ''
+LearningSummary: ''
+MiscMD: ''
+LearningObj: |-
+  1. Interpret a concept map of how our perception of beauty results from interactions between our brain, sensory systems, and the environment.
+  2. Calculate and interpret two mathematical measures of beauty: symmetry and prototypicality (i.e. averageness).
+  3. Create a list of factors that affect what people perceive as beautiful.
+Tags: ''
+Description: ''
+QuickPrep: |
+  1. Check out lesson multimedia above
+  2. Look over [Teaching Materials](#teaching_materials)
+  3. Read our easy [Procedure](#procedure)
+  4. Teach it and [let us know what you think!](#feedback)
+Bonus: ''
+Extensions: ''
+Background: ''
+ConnectionToResearch: ''
+Feedback: ''
+Credits: ''
+ScriptsToRun: ''
+ReadyToCompile:
+- Front Matter
+- Teaching Materials

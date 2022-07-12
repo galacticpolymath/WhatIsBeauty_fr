@@ -1,0 +1,29 @@
+{
+  "id": "",
+  "ShortTitle": "WhatIsBeauty",
+  "Language": "English",
+  "Country": "United States",
+  "lang": "en",
+  "lng": "eng",
+  "locale": "en-US",
+  "TemplateVer": "0.3.3",
+  "galacticPubsVer": "0.8.2",
+  "FirstPublicationDate": "",
+  "LastUpdated": "2022-07-11 17:32:23",
+  "URL": "",
+  "GPCatalogPath": "https://catalog.galacticpolymath.com/lessons/WhatIsBeauty/LESSON.json",
+  "GitHubPath": "git@github.com:galacticpolymath/WhatIsBeauty.git",
+  "PublicationStatus": "Draft",
+  "RebuildAllMaterials": false,
+  "ReleaseDate": "",
+  "Title": "What Is Beauty",
+  "Subtitle": "",
+  "SponsorName": "",
+  "SponsoredBy": "",
+  "SponsorImage": {
+    "url": null
+  },
+  "CoverImage": {
+    "url": null
+  }
+}
