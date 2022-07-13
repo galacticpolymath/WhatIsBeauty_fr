@@ -1,14 +1,14 @@
 id: 5
-ShortTitle: WhatIsBeauty
+ShortTitle: WhatIsBeauty_fr
 Language: French
-Country: ''
+Country: Aruba
 lang: fr
 lng: fre
-locale: fr
+locale: fr-AW
 TemplateVer: 0.3.3
-galacticPubsVer: 0.8.2
+galacticPubsVer: 0.8.3
 FirstPublicationDate: 2022-07-11 21:10:05
-LastUpdated: 2022-07-13 11:22:08
+LastUpdated: 2022-07-13 12:55:05
 URL: https://galacticpolymath.com/lessons/5
 GPCatalogPath: https://catalog.galacticpolymath.com/lessons/WhatIsBeauty/LESSON.json
 GitHubPath: git@github.com:galacticpolymath/WhatIsBeauty_fr.git
@@ -61,6 +61,4 @@ ConnectionToResearch: ''
 Feedback: ''
 Credits: ''
 ScriptsToRun: ''
-ReadyToCompile:
-- Front Matter
-- Teaching Materials
+ReadyToCompile: Front Matter
