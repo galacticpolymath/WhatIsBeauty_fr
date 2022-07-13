@@ -1,25 +1,25 @@
 id: 5
 ShortTitle: WhatIsBeauty
-Language: English
-Country: United States
-lang: en
-lng: eng
-locale: en-US
+Language: French
+Country: ''
+lang: fr
+lng: fre
+locale: fr
 TemplateVer: 0.3.3
 galacticPubsVer: 0.8.2
 FirstPublicationDate: 2022-07-11 21:10:05
-LastUpdated: 2022-07-11 21:10:05
+LastUpdated: 2022-07-13 11:22:08
 URL: https://galacticpolymath.com/lessons/5
 GPCatalogPath: https://catalog.galacticpolymath.com/lessons/WhatIsBeauty/LESSON.json
 GitHubPath: git@github.com:galacticpolymath/WhatIsBeauty.git
 PublicationStatus: Draft
 RebuildAllMaterials: no
-ReleaseDate: ''
+ReleaseDate: []
 Title: What Is Beauty
 Subtitle: ''
 SponsorName: ''
 SponsoredBy: ''
-SponsorLogo: ''
+SponsorLogo: []
 LessonBanner: ''
 TargetSubject: Science
 LessonEnvir: Classroom
@@ -34,7 +34,7 @@ LearningChart: ''
 LearningChart_params_centralText: ''
 LearningChart_params_caption: ''
 LearningChart_params_captionN: yes
-SupportingMedia: ''
+SupportingMedia: []
 DrivingQ: |
   1. What makes humans and other animals perceive something as beautiful?
   2. How can we mathematically measure objects or images in ways that capture what a viewer would describe as “beautiful”?
