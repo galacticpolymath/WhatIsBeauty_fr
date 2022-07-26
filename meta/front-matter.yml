@@ -1,9 +1,9 @@
 id: 5
 ShortTitle: ILikeThat
 Language: French
-Country: ''
+Country: .na
 DefaultLanguage: French
-DefaultCountry: ''
+DefaultCountry: .na
 lang: fr
 lng: fre
 locale: fr
@@ -11,57 +11,57 @@ DefaultLocale: fr
 TemplateVer: 0.3.4
 galacticPubsVer: 0.8.7
 FirstPublicationDate: 2022-07-11 21:10:05
-LastUpdated: 2022-07-26 14:01:28
+LastUpdated: 2022-07-26 18:00:08
 URL: https://galacticpolymath.com/lessons/5
 GPCatalogPath: https://catalog.galacticpolymath.com/lessons/ILikeThat_fr/LESSON.json
 GitHubPath: git@github.com:galacticpolymath/ILikeThat_fr.git
 PublicationStatus: Draft
 RebuildAllMaterials: no
-ReleaseDate: ''
+ReleaseDate: .na
 Title: What Is Beauty
-Subtitle: ''
-SponsorName: ''
-SponsoredBy: ''
-SponsorLogo: ''
-LessonBanner: ''
+Subtitle: .na
+SponsorName: .na
+SponsoredBy: .na
+SponsorLogo: .na
+LessonBanner: .na
 TargetSubject: Science
 LessonEnvir: Classroom
 ForGrades: 5-9
 GradesOrYears: Grades
-EstLessonTime: ''
-LearningEpaulette: ''
-LearningEpaulette_vert: ''
+EstLessonTime: .na
+LearningEpaulette: .na
+LearningEpaulette_vert: .na
 LearningEpaulette_params_heightScalar: 1.0
 LearningEpaulette_params_randomSeed: 101.0
-LearningChart: ''
-LearningChart_params_centralText: ''
-LearningChart_params_caption: ''
+LearningChart: .na
+LearningChart_params_centralText: .na
+LearningChart_params_caption: .na
 LearningChart_params_captionN: yes
-SupportingMedia: ''
+SupportingMedia: .na
 DrivingQ: |
   1. What makes humans and other animals perceive something as beautiful?
   2. How can we mathematically measure objects or images in ways that capture what a viewer would describe as “beautiful”?
 EssentialQ: How can science help deepen our understanding of the Arts, Humanities,
   and ourselves?
-Hooks: ''
-LearningSummary: ''
-MiscMD: ''
+Hooks: .na
+LearningSummary: .na
+MiscMD: .na
 LearningObj: |-
   1. Interpret a concept map of how our perception of beauty results from interactions between our brain, sensory systems, and the environment.
   2. Calculate and interpret two mathematical measures of beauty: symmetry and prototypicality (i.e. averageness).
   3. Create a list of factors that affect what people perceive as beautiful.
-Tags: ''
-Description: ''
+Tags: .na
+Description: .na
 QuickPrep: |
   1. Check out lesson multimedia above
   2. Look over [Teaching Materials](#teaching_materials)
   3. Read our easy [Procedure](#procedure)
   4. Teach it and [let us know what you think!](#feedback)
-Bonus: ''
-Extensions: ''
-Background: ''
-ConnectionToResearch: ''
-Feedback: ''
-Credits: ''
-ScriptsToRun: ''
+Bonus: .na
+Extensions: .na
+Background: .na
+ConnectionToResearch: .na
+Feedback: .na
+Credits: .na
+ScriptsToRun: .na
 ReadyToCompile: Front Matter
